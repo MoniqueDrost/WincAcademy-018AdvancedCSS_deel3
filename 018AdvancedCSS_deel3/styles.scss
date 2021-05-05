@@ -1,0 +1,102 @@
+
+@mixin icons {
+    font-weight: 900;
+    color: white;
+    padding-right: 25px;
+}
+
+@mixin hover {
+        position: absolute;
+        right: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    background-color: #c3cfe2;
+    height: 100vh;
+    width: 95%;
+}
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+    
+li {
+    display: block;
+    width: 250px;
+    padding: 15px;
+    position: absolute;
+    right: -200px;
+    height: 50px;
+    margin: 0;
+    transition: right 500ms ease-out; 
+    &:hover {
+        @include hover;
+    }
+}
+
+a {
+    color: white;  
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+
+.social-media.blog {
+    background-color: #e17b77;
+    top: 50px;
+    &::before { 
+        font-family: "Font Awesome 5 Free"; 
+        content: "\f5fc"; 
+        @include icons;
+    }
+
+}
+
+.social-media.twitter {
+    background-color: #00aced;
+    top: 100px;
+    &::before {
+    font-family: "Font Awesome 5 Brands"; 
+    content: "\f099"; 
+    @include icons; 
+    }
+}
+
+.social-media.linkedin {
+    background-color: #007bb6;
+    top: 150px;
+    &::before {
+    font-family: "Font Awesome 5 Brands"; 
+    content: "\f0e1";   
+    @include icons; 
+    }
+}
+
+.social-media.facebook {
+    background-color: #3b5998;
+    top: 200px;
+    &::before {
+    font-family: "Font Awesome 5 Brands"; 
+    @include icons;
+    content: "\f39e";    
+    }
+}
+
+
+.social-media.github {
+    background-color: #333;
+    top: 250px;
+    &::before {
+    font-family: "Font Awesome 5 Brands"; 
+    content: "\f09b"; 
+    @include icons; 
+    }
+}
+
+
